@@ -41,7 +41,7 @@ class Form extends Component {
                 <input
                 name="URL"
                 type="url"
-                placeholder="Add a URL"
+                placeholder="Add a name"
                 // value={this.state.URL}
                 onChange={this.handleChange}
                 />
