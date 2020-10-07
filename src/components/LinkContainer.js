@@ -2,33 +2,29 @@ import React from 'react';
 import Table from './Table';
 import Form from './Form';
 
-class LinkContainer extends React.Component {   /* TODO - Create state object for storing favLinks */
+class LinkContainer extends React.Component {
     constructor(props){
         super(props)
-        this.state = {favLinks: [{
-            linkName: "React",
-            URL: "https://reactjs.org/",
-        },]};
-    }
+        this.state = 
+            {
+            favLinks:[]
+            }
+        }
 
-    removeLink = index => {      //  TODO - Create logic for setting the state to filter array and remove favLink at index
-        var favLinks = [...this.state.favLinks];
-        favLinks.splice(index, 1);
-        this.setState( state => ({ favLinks }));
+    removeLink = index => {
+        var copy = this.state.favLinks;
+        var ind = copy.indexOf(index);
+        copy.splice(ind, 1);
+        this.setState({favLinks: copy})
     }
 
     handleSubmit = favLink => {
+        console.log(favLink)
         let favLinks = this.state.favLinks
         favLinks.push(favLink);
         this.setState({
-            // favLinks: [favlinks, ...this.state.favLinks]
-            favLinks: favLink
+            favLinks: favLinks
         })
-        /*
-            TODO - Create logic to setState and add new favLink to favLinks array in state
-        */
-        console.log("Here in handle submit");
-        console.log(this.state.favLinks);
     }
 
     render() {

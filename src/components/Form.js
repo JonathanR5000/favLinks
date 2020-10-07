@@ -4,7 +4,7 @@ class Form extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            linkName: '',
+            name: '',
             URL: '',
         };
         this.handleChange = this.handleChange.bind(this);
@@ -19,7 +19,7 @@ class Form extends Component {
         event.preventDefault();     // to prevent page reload on form submit
         const submission = 
         {
-            linkName : this.state.linkName,
+            name : this.state.name,
             URL: this.state.URL
         };
         this.props.handleSubmit(submission);
@@ -31,9 +31,8 @@ class Form extends Component {
             <form>      {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
                 <p> Name </p>
                 <input
-                name="linkName"
+                name="name"
                 type="text"
-                // value={this.state.linkName}
                 placeholder="Add a name"
                 onChange={this.handleChange}
                 />
@@ -42,7 +41,6 @@ class Form extends Component {
                 name="URL"
                 type="url"
                 placeholder="Add a URL"
-                // value={this.state.URL}
                 onChange={this.handleChange}
                 />
 
