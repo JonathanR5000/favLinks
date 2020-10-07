@@ -5,10 +5,7 @@ import Form from './Form';
 class LinkContainer extends React.Component {
     constructor(props){
         super(props)
-        this.state = 
-            {
-            favLinks:[]
-            }
+        this.state = { favLinks:[] }
         }
 
     removeLink = index => {
@@ -19,12 +16,9 @@ class LinkContainer extends React.Component {
     }
 
     handleSubmit = favLink => {
-        console.log(favLink)
         let favLinks = this.state.favLinks
         favLinks.push(favLink);
-        this.setState({
-            favLinks: favLinks
-        })
+        this.setState({favLinks: favLinks})
     }
 
     render() {

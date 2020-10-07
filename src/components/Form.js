@@ -16,7 +16,7 @@ class Form extends Component {
     };
 
     onFormSubmit = (event) => {   
-        event.preventDefault();     // to prevent page reload on form submit
+        event.preventDefault();
         const submission = 
         {
             name : this.state.name,
@@ -26,9 +26,8 @@ class Form extends Component {
     }
 
     render() {
-
         return(
-            <form>      {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
+            <form>
                 <p> Name </p>
                 <input
                 name="name"
@@ -36,6 +35,7 @@ class Form extends Component {
                 placeholder="Add a name"
                 onChange={this.handleChange}
                 />
+                
                 <p> URL </p>
                 <input
                 name="URL"
