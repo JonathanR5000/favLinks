@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Form extends Component {
     constructor(props) {
         super(props);
-        this.setState = {
+        this.state = {
             linkName: '',
             URL: '',
         };
@@ -12,7 +12,7 @@ class Form extends Component {
     }
 
     handleChange = event => {
-        this.setState({ linkName: event.target.linkName, URL: event.target.linkName});
+        this.setState({ [event.target.name]: event.target.value});
     };
 
     onFormSubmit = (event) => {   
@@ -22,13 +22,13 @@ class Form extends Component {
             linkName : this.state.linkName,
             URL: this.state.URL
         };
-        this.props.handleChange(submission);
+        this.props.handleSubmit(submission);
     }
 
     render() {
 
         return(
-            <form onSubmit={this.onFormSubmit}>      {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
+            <form>      {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
                 <p> Name </p>
                 <input
                 name="linkName"

@@ -17,10 +17,12 @@ class LinkContainer extends React.Component {   /* TODO - Create state object fo
     handleSubmit = favLink => {
         this.setState({
             // favLinks: [favlinks, ...this.state.favLinks]
+            favLinks: favLink
         })
         /*
             TODO - Create logic to setState and add new favLink to favLinks array in state
         */
+        console.log("Here in handle submit");
     }
 
     render() {
@@ -33,7 +35,7 @@ class LinkContainer extends React.Component {   /* TODO - Create state object fo
                 <br/>
 
                 <h3>Add New</h3>
-                <Form /> 
+                <Form handleSubmit= {this.handleSubmit}/> 
             </div>
         );
     }
