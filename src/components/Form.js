@@ -12,8 +12,7 @@ class Form extends Component {
     }
 
     handleChange = event => {
-        this.setState({ linkName: event.target.linkName, URL: event.target.linkName
-        });
+        this.setState({ linkName: event.target.linkName, URL: event.target.linkName});
     };
 
     onFormSubmit = (event) => {   
@@ -35,12 +34,14 @@ class Form extends Component {
                 name="linkName"
                 type="text"
                 // value={this.state.linkName}
+                placeholder="Add a name"
                 onChange={this.handleChange}
                 />
                 <p> URL </p>
                 <input
                 name="URL"
                 type="url"
+                placeholder="Add a URL"
                 // value={this.state.URL}
                 onChange={this.handleChange}
                 />
