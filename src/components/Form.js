@@ -18,13 +18,14 @@ class Form extends Component { // TODO - set initial state for link name and URL
 
     onFormSubmit = (event) => {     // TODO - Logic for calling props to handle submission and setting state changes    
         event.preventDefault();     // to prevent page reload on form submit
-        this.props.onSubmit({
-            name: this.state.name,
+        
+        const submission = 
+        {
+            linkName : this.state.linkName,
             URL: this.state.URL
-        });
-        this.setState({
-            name : URL
-        });
+        };
+
+        this.props.handleChange(submission);
     }
 
     render() {
@@ -33,14 +34,16 @@ class Form extends Component { // TODO - set initial state for link name and URL
             <form onSubmit={this.onFormSubmit}>      {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
                 <p> Name </p>
                 <input
+                name="linkName"
                 type="text"
-                // value={this.state.linkName}
+                value={this.state.linkName}
                 onChange={this.handleChange}
                 />
                 <p> URL </p>
                 <input
-                type="text"
-                // value={this.state.URL}
+                name="URL"
+                type="url"
+                value={this.state.URL}
                 onChange={this.handleChange}
                 />
 

@@ -17,7 +17,6 @@ class LinkContainer extends React.Component {   /* TODO - Create state object fo
     handleSubmit = favLink => {
         this.setState({
             // favLinks: [favlinks, ...this.state.favLinks]
-            
         })
         /*
             TODO - Create logic to setState and add new favLink to favLinks array in state

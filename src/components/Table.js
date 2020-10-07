@@ -38,7 +38,6 @@ const Table = (props) => {
             </table>
         );
     }
-    /* TODO - return <table> component, TableHeader and TableBody  */
 }
 
 export default Table;
