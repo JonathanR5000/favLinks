@@ -15,10 +15,11 @@ const TableHeader = () => {     // boilerplate table header functional component
 const TableBody = props =>  {
     // boilerplate table body functional component 
     // we use Array.map to create table rows from LinkData passed via props
+    console.log(props.linkData);
     const rows = props.linkData.map((row, index) => {
         return (
             <tr key={index}>
-                <td>{row.name}</td>
+                <td>{row.linkName}</td>
                 <td><a href={row.URL}>{row.URL}</a></td>
                 <td><button onClick={() => props.removeLink(index)}>Delete</button></td>
             </tr>
